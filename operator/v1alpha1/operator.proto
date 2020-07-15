@@ -234,7 +234,8 @@ message IstioComponentSetSpec {
     reserved "citadel", "galley", "node_agent", "proxy", "sidecar_injector";
 }
 
-// Configuration for base component.
+// Configuration for the base component. This component comprises cluster resources used by other Istio components,
+// including CRDs, service accounts, roles, bindings and webhook configurations.
 message BaseComponentSpec {
     // Selects whether this component is installed.
     TypeBoolValueForPB enabled = 1;
